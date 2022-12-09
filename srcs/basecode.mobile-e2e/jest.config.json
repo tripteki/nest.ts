@@ -1,0 +1,13 @@
+{
+    "preset": "../../jest.preset",
+    "testEnvironment": "./environment",
+    "testRunner": "jest-circus/runner",
+    "setupFilesAfterEnv": [ "<rootDir>/test-setup.ts" ],
+    "testTimeout": 120000,
+
+    "transform": {
+
+        "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "@nrwl/react/plugins/jest",
+        "^.+\\.[tj]sx?$": "babel-jest"
+    }
+}

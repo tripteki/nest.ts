@@ -1,0 +1,104 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+
+    "name": "basecode.mobile-e2e",
+
+    "projectType": "application",
+    "sourceRoot": "srcs/basecode.mobile-e2e/src",
+
+    "targets": {
+
+        "build-ios": {
+
+            "executor": "@nrwl/detox:build",
+
+            "options": {
+
+                "detoxConfiguration": "ios.sim.debug"
+            },
+
+            "configurations": {
+
+                "production": {
+
+                    "detoxConfiguration": "ios.sim.release"
+                }
+            }
+        },
+
+        "test-ios": {
+
+            "executor": "@nrwl/detox:test",
+
+            "options": {
+
+                "detoxConfiguration": "ios.sim.debug",
+                "buildTarget": "basecode.mobile-e2e:build-ios"
+            },
+
+            "configurations": {
+
+                "production": {
+
+                    "detoxConfiguration": "ios.sim.release",
+                    "buildTarget": "basecode.mobile-e2e:build-ios:production"
+                }
+            }
+        },
+
+        "build-android": {
+
+            "executor": "@nrwl/detox:build",
+
+            "options": {
+
+                "detoxConfiguration": "android.emu.debug"
+            },
+
+            "configurations": {
+
+                "production": {
+
+                    "detoxConfiguration": "android.emu.release"
+                }
+            }
+        },
+
+        "test-android": {
+
+            "executor": "@nrwl/detox:test",
+
+            "options": {
+
+                "detoxConfiguration": "android.emu.debug",
+                "buildTarget": "basecode.mobile-e2e:build-ios"
+            },
+
+            "configurations": {
+
+                "production": {
+
+                    "detoxConfiguration": "android.emu.release",
+                    "buildTarget": "basecode.mobile-e2e:build-ios:production"
+                }
+            }
+        },
+
+        "lint": {
+
+            "executor": "@nrwl/linter:eslint",
+            "outputs": [ "{options.outputFile}" ],
+
+            "options": {
+
+                "lintFilePatterns": [
+
+                    "srcs/basecode.mobile-e2e/**/*.{ts,tsx,js,jsx}"
+                ]
+            }
+        }
+    },
+
+    "tags": [],
+    "implicitDependencies": [ "basecode.mobile" ]
+}

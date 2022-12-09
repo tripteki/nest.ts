@@ -1,0 +1,9 @@
+README.md
+.git*
+.gitignore
+Dockerfile*
+Vagrantfile*
+
+android/
+ios/
+node_modules/

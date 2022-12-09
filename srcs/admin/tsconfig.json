@@ -1,0 +1,17 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "_compilerOptions": {},
+    "files": [],
+    "include": [],
+    "_exclude": [],
+
+    "references": [
+
+        {
+            "path": "./tsconfig.app.json"
+        },
+        {
+            "path": "./tsconfig.spec.json"
+        }
+    ]
+}

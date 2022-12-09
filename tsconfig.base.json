@@ -1,0 +1,24 @@
+{
+    "compileOnSave": false,
+
+    "compilerOptions": {
+
+        "rootDir": ".",
+        "baseUrl": ".",
+        "moduleResolution": "node",
+        "target": "es2015",
+        "module": "esnext",
+        "lib": [ "es2017", "dom" ],
+        "paths": {},
+        "sourceMap": true,
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true
+    },
+
+    "_include": [],
+    "exclude": [ "node_modules", "tmp" ]
+}
